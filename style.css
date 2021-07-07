@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(97, 97, 245);
+    background-color: rgb(182, 182, 245);
     display: flexbox;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -36,7 +36,7 @@ div #msg_inicio, #msg_fim, #msg_passo{
 }
 
 div #botao{
-
+    width: 100px;
 }
 
 div #botao:hover{
