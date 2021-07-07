@@ -1,22 +1,31 @@
-function carregar() {
+function contar(){
 
-let msg = document.getElementById("msg");
-let img = document.getElementById("imagem");
-let data = new Date()
-let hora = data.getHours()
-msg.innerHTML = `Agora são ${hora} horas`;
-if(hora >= 0 && hora < 12){
-    //bom dia
-    img.src = "./img/gmorningsf.png"
-    document.body.style.background = "rgb(250, 248, 144)"
-} else if (hora >= 12 && hora <= 18) {
-    //boa tarde
-    img.src = "./img/eveningSydneysf.png"
-    document.body.style.background = "rgb(150, 150, 156)"
-} else {
-    //boa noite
-    img.src = "./img/nightLondonsf.png"
-    document.body.style.background = "rgb(37, 37, 80)"
+let inicio = document.getElementById("msg_inicio").value;
+let fim = document.getElementById("msg_fim").value;
+let passo = document.getElementById("msg_passo").value;
+let resultado = document.getElementById("contagem");
 
+let inicion = Number(inicio);
+let fimn = Number(fim);
+let passon = Number(passo);
+if(fimn == 0){
+    fimn = 1
+}
+
+if(inicion.length == 0 || fimn.length == 0 || passon.length == 0){
+    alert("[ERRO] Faltam dados!")
+} else{
+    resultado.innerHTML = `Contando: `
+    if (inicion < fimn){
+        for (let i= inicion; i <= fimn; i+=passon){
+            resultado.innerHTML += `${i} \u{1F449}`
+        }
+    
+    } else {
+        for(let c = inicion; c>=fimn; c-=passon){
+            resultado.innerHTML += `${c} \u{1f449}`
+        }
+        resultado.innerHTML += `\u{1F31F}`
+    }
 }
 }

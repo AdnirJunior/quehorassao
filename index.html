@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hora do dia</title>
+    <title>Contagem</title>
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section id="main">
         <div id="msg">
-            Aqui vai aparecer a hora
+            <span>Inicio:</span>
+            <input type="number" name="inicio" id="msg_inicio"><br>
+            <span>Fim:</span>
+            <input type="number" name="fim" id="msg_fim"><br>
+            <span>Passo: </span>
+            <input type="number" name="passo" id="msg_passo"><br>
+            <input type="button" value="Contar" id="botao" onclick="contar()">
         </div>
-        <div id="foto">
-            <img id="imagem" src="./img/nightLondonsf.png" alt="foto da manha" srcset="">
+        <div id="contagem">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
