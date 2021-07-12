@@ -1,5 +1,10 @@
+:root {
+    --cor-de-fundo: rgb(182, 182, 245);;
+}
+
+
 body{
-    background-color: rgb(182, 182, 245);
+    background-color: var(--cor-de-fundo);
     display: flexbox;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -34,9 +39,19 @@ div #msg_inicio, #msg_fim, #msg_passo{
     margin-bottom: 15px;
     border-radius: 3px;
 }
-
+div #fnum{
+    background-color: var(--cor-de-fundo);
+}
 div #botao{
     width: 100px;
+    margin-left: 20px;
+}
+#flista{
+    background-color: var(--cor-de-fundo);
+    width: 50%;
+}
+#flista:hover, #fnum:hover{
+    background-color: thistle;
 }
 
 div #botao:hover{
